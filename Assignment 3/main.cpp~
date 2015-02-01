@@ -1,0 +1,73 @@
+#include <iostream>
+#include <assert.h>
+#include <string>
+
+using namespace std;
+
+class Calculations {
+  public:
+    float mean(float i[]);
+    float min(float m[]);
+    float max(float n[]);
+    std::string test();
+};
+
+float Calculations::mean(float p[]) {
+  float avg = 0;
+  assert(avg == 0);
+  for (int i = 0; i < 9; i++) {
+    avg = avg + p[i];
+  }
+  avg = avg/9;
+  return avg;
+}
+
+float Calculations::min(float m[]) {
+  float temp = m[0];
+  assert(temp != 0);
+  for (int i = 1; i < 9; i++) {
+    if (temp > m[i]) {
+       temp = m[i];
+    }
+  }
+  return temp;
+}
+
+float Calculations::max(float n[]) {
+  float temp = n[0];
+  assert(temp != 0);
+  for (int i = 1; i < 9; i++) {
+    if (temp < n[i]) {
+      temp = n[i];
+    }
+  }
+  return temp;
+}
+    
+string Calculations::test () {
+  float ar[] = {34, 67, 12, 80, 30, 123, 12, 2, 9};
+  float num = 0;
+  num = mean(ar);
+  assert (num != 0);
+  assert (num == 41);
+  num = min(ar);
+  assert (num != 0);
+  assert (num == 2);
+  num = max(ar);
+  assert (num != 0);
+  assert (num == 123);
+  string message = "Test Successful!\n";
+  return message;
+}
+
+
+
+int main () {
+   float t[] = {4, 677, 23, 905, 67, 123, 7, 88, 90};
+   Calculations cal;;
+    cout << cal.test() << endl;
+    cout << "The mean for the array is: " << cal.mean(t) << endl;
+    cout << "The min for the array is: " << cal.min(t) << endl;
+    cout << "The max for the array is: " << cal.max(t) << endl;
+    return 0;
+}
