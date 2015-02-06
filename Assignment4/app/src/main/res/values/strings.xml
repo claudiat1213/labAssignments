@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Assignment 4</string>
+    <string name="change_button">Set Background</string>
+    <string name="red_button">Red</string>
+    <string name="blue_button">Blue</string>
+    <string name="yellow_button">Yellow</string>
+    <string name="green_button">Green</string>
+    <string name="action_settings">Settings</string>
+
+</resources>
